@@ -1,0 +1,39 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title></ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <h3>Top Artist</h3>
+    <span>{{this.countArtists}}/{{this.topArtists?.topartists.artist.length}}</span>
+    <ion-slides (ionSlideDidChange)="slideChanged('countArtists', 'artistsSlider')" #artistsSlider>
+        <ion-slide *ngFor="let artist of this.topArtists?.topartists.artist">
+            <ion-card>
+                <img src="{{artist.image[3]['#text']}}"/>
+                <div class="tableCell">
+                    <div class="card-title">{{artist.name}}</div>
+                    <div class="card-subtitle"></div>
+                </div>
+            </ion-card>
+        </ion-slide>
+    </ion-slides>
+
+    <h3>Top Tracks</h3>
+    <span>{{this.countTracks}}/{{this.topTracks?.tracks.track.length}}</span>
+    <ion-slides (ionSlideDidChange)="slideChanged('countTracks', 'tracksSlider')" #tracksSlider>
+        <ion-slide *ngFor="let track of this.topTracks?.tracks.track">
+            <ion-card>
+                <img src="{{track.image[3]['#text']}}"/>
+                <div class="tableCell">
+                    <div class="card-title">{{track.name}}</div>
+                    <div class="card-subtitle">{{track.artist.name}}</div>
+                </div>
+            </ion-card>
+        </ion-slide>
+    </ion-slides>
+
+
+</ion-content>

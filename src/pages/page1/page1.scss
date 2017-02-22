@@ -1,0 +1,39 @@
+page-page1 {
+    ion-card {
+        position: relative;
+        text-align: center;
+        display: table;
+        height: 50vh;
+        width: 100%;
+        div.tableCell{
+            display: table-cell;
+            vertical-align: middle;
+            position: relative;
+            z-index: 1;
+            .card-title {       
+                font-size: 2.0em;
+                width: 100%;
+                font-weight: bold;
+                color: #fff;
+            }
+            .card-subtitle {
+                font-size: 1.0em;     
+                width: 100%;
+                color: #fff;
+            }
+        }
+       
+    }
+ .slide-zoom img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;        
+            object-fit: cover;
+        }
+    ion-slides {
+        height: auto;
+    }
+}
