@@ -3,6 +3,8 @@ import { MusicService } from '../../providers/musicService/';
 import { NavController } from 'ionic-angular';
 import { ViewChild } from '@angular/core';
 import { Slides } from 'ionic-angular';
+import { MapPage } from './../map/map';
+
 
 @Component({
 	selector: 'page-page1',
@@ -28,7 +30,6 @@ export class Page1 {
 		});  
 		this._musicService.getData('topTracks').subscribe( result => {
 			this.topTracks = result;
-			console.log(result)
 		});  
   	}
   	slideChanged(param, slider) {

@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
 import { APIKEY } from '../../conf/';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
-import { RequestOptions, Headers, Http} from '@angular/http';
+import { Http} from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
 

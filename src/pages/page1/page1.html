@@ -7,6 +7,7 @@
     </ion-navbar>
 </ion-header>
 <ion-content padding>
+    <page-map></page-map>
     <h3>Top Artist</h3>
     <span>{{this.countArtists}}/{{this.topArtists?.topartists.artist.length}}</span>
     <ion-slides (ionSlideDidChange)="slideChanged('countArtists', 'artistsSlider')" #artistsSlider>
